@@ -42,11 +42,8 @@ function playGame () {
             checkGuess(true)
         }
     }
-    gameOver()
-}
-function gameOver () {
     basic.clearScreen()
-    if (score >= rounds / 2) {
+    if (score > rounds / 2) {
         music.play(music.builtinPlayableSoundEffect(soundExpression.happy), music.PlaybackMode.InBackground)
         basic.showString("Winner")
     } else {
